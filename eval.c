@@ -66,7 +66,7 @@ static void infer_type(node_t *nptr) {
                 } else if (nptr->children[0] && nptr->children[1] 
                 && nptr->children[0]->type == INT_TYPE 
                 && nptr->children[1]->type == INT_TYPE) {
-                    nptr->type = STRING_TYPE;
+                    nptr->type = INT_TYPE;
                 } else {
                     handle_error(ERR_TYPE);
                 }
@@ -80,7 +80,7 @@ static void infer_type(node_t *nptr) {
                 } else if (nptr->children[0] && nptr->children[1] 
                 && nptr->children[0]->type == INT_TYPE 
                 && nptr->children[1]->type == INT_TYPE) {
-                    nptr->type = STRING_TYPE;
+                    nptr->type = INT_TYPE;
                 } else {
                     handle_error(ERR_TYPE);
                 }
