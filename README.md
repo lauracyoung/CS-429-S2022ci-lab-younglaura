@@ -46,3 +46,4 @@ This is the code base for CS429 F2022 CI lab. Check the writeup for more details
 * The interactive prompt of `ci` takes two special commands:
     * `@q` to quit the program
     * `@p` to print all defined variables (EEL-2)
+# CS429-S2022-ci-lab
