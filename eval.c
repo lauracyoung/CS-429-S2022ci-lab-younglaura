@@ -263,7 +263,7 @@ static void eval_node(node_t *nptr) {
                         case TOK_TIMES:
                             if (nptr->type == INT_TYPE) {
                                 nptr->val.ival = nptr->children[0]->val.ival * nptr->children[1]->val.ival;
-                            } else if (nptr->type == STRING_TYPE) {
+                            } else if (nptr->type == STRING_TYPE && nptr->children[1]->val.ival >= 0) {
                                 nptr->val.sval = malloc((strlen(nptr->children[0]->val.sval) * nptr->children[1]->val.ival) + 1);
                                 nptr->val.sval[0] = '\0';
                                 for (int i = 0; i < nptr->children[1]->val.ival; i++) {
